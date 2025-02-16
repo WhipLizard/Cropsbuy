@@ -1,0 +1,210 @@
+<html>
+  <head>
+    <title>Buy</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="main">
+      <div class="navbar">
+        <button class="menu-toggle">
+          Menu <span>▼</span>
+      </button>
+        <ul>
+          <li>
+             <a href="#rice"><span class="icon">Rice</span></a>
+          </li>
+          <li>
+              <a href="#maize"><span class="icon">Maize</span></a>
+          </li>
+          <li>
+              <a href="#fruits"><span class="icon">Fruits</span></a>
+          </li>
+          <li id="btn">
+              <a href="#" ><span class="icons" style="color:rgb(44, 218, 38);">ORDER</span></a>
+          </li>
+      </ul>
+  </div>
+</div>
+<script>
+  var btn = document.getElementById("btn");
+  btn.onclick = function() {
+    var response = confirm("Owner Name: Abhilash Das,  Country: India. Please provide the specification of order via WhatsApp To continue please click OK");
+    if (response) {
+      window.open("https://wa.me/9387358662", "_blank");
+    }
+  }
+</script>
+
+    <div class="container"  id="rice">
+      <h2 class="heading">Rice</h2>
+      <div class="card_container">
+        <article class="card_article">
+          <img src="rice.jpg" class="card_img">
+          <div class="card_data">
+            <span class="card_description">Basmati Rice 100kg</span>
+            <h2 class="card_title">Suresh Patil</h2>
+            <a href="#" class="card_button">rs 9,500</a>
+          </div>
+        </article>
+
+        <article class="card_article">
+          <img src="rice1.jpg" class="card_img">
+          <div class="card_data">
+            <span class="card_description">Sona Masoori Rice 100kg</span>
+            <h2 class="card_title">Mahesh Kumar</h2>
+            <a href="#" class="card_button">rs 8,769</a>
+          </div>
+        </article>
+
+        <article class="card_article">
+          <img src="rice2.jpg" class="card_img">
+          <div class="card_data">
+            <span class="card_description">Kolam Rice 98kg</span>
+            <h2 class="card_title">Anil Sharma</h2>
+            <a href="#" class="card_button">rs 9,895</a>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2 class="heading">Wheat</h2>
+      <div class="card_container">
+        <article class="card_article">
+          <img src="wheat.jpg" class="card_img">
+          <div class="card_data">
+            <span class="card_description">Kalyansona Wheat 200kg</span>
+            <h2 class="card_title">Sundarlal Kd</h2>
+            <a href="#" class="card_button">rs 6,755</a>
+          </div>
+        </article>
+
+        <article class="card_article">
+          <img src="wheat1.jpg" class="card_img">
+          <div class="card_data">
+            <span class="card_description">Sharbhati Wheat 400kg</span>
+            <h2 class="card_title">Anil Kumar</h2>
+            <a href="#" class="card_button">rs 12,580</a>
+          </div>
+        </article>
+
+        <article class="card_article">
+          <img src="wheat2.jpg" class="card_img">
+          <div class="card_data">
+            <span class="card_description">Lokwan Wheat 300kg</span>
+            <h2 class="card_title">Banjit Mishra</h2>
+            <a href="#" class="card_button">rs 9,600</a>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="container" id="maize">
+      <h2 class="heading" >Maize</h2>
+      <div class="card_container">
+        <article class="card_article">
+          <img src="maize.jpg" class="card_img">
+          <div class="card_data">
+            <span class="card_description">Navjot Maize 200kg</span>
+            <h2 class="card_title">Kisan Das</h2>
+            <a href="#" class="card_button">rs 5,600</a>
+          </div>
+        </article>
+
+        <article class="card_article">
+          <img src="maize1.jpg" class="card_img">
+          <div class="card_data">
+            <span class="card_description">Navjot Maize 500kg</span>
+            <h2 class="card_title">Anil Kumar</h2>
+            <a href="#" class="card_button">rs 12,000</a>
+          </div>
+        </article>
+
+        <article class="card_article">
+          <img src="maize2.jpg" class="card_img">
+          <div class="card_data">
+            <span class="card_description">DMH-117 Maize 400kg</span>
+            <h2 class="card_title">Arun Jeet</h2>
+            <a href="#" class="card_button">rs 14,250</a>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2 class="heading">Tea</h2>
+      <div class="card_container">
+        <article class="card_article">
+          <img src="tea.jpg" class="card_img">
+          <div class="card_data">
+            <span class="card_description">Assam Tea 400kg</span>
+            <h2 class="card_title">Anil Das</h2>
+            <a href="#" class="card_button">1kg = rs 531 => rs 1,23,400</a>
+          </div>
+        </article>
+
+        <article class="card_article">
+          <img src="tea1.jpg" class="card_img">
+          <div class="card_data">
+            <span class="card_description">Darjeeling Tea 460kg</span>
+            <h2 class="card_title">Sunita Sinha</h2>
+            <a href="#" class="card_button">1kg = rs 1789 => rs 8,22,940 </a>
+          </div>
+        </article>
+
+        <article class="card_article">
+          <img src="tea2.jpg" class="card_img">
+          <div class="card_data">
+            <span class="card_description">Nilgiri Tea 300kg</span>
+            <h2 class="card_title">Mahesh Kumar</h2>
+            <a href="#" class="card_button">1kg = rs 380 => rs 1,14,000</a>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2 class="heading" id="fruits">Fruits</h2>
+      <div class="card_container">
+        <article class="card_article">
+          <img src="fruit.jpg" class="card_img">
+          <div class="card_data">
+            <span class="card_description">Kashmiri Apples 200kg</span>
+            <h2 class="card_title">Ritesh Singh</h2>
+            <a href="#" class="card_button">1kg = 188 => rs 37,600</a>
+          </div>
+        </article>
+
+        <article class="card_article">
+          <img src="fruit1.jpg" class="card_img">
+          <div class="card_data">
+            <span class="card_description">Alphonso Mango 500Kg</span>
+            <h2 class="card_title">Ganesh Reddy</h2>
+            <a href="#" class="card_button">1kg = rs 500 => rs 2,50,000</a>
+          </div>
+        </article>
+
+        <article class="card_article">
+          <img src="fruit2.jpg" class="card_img">
+          <div class="card_data">
+            <span class="card_description">Banana 450Kg</span>
+            <h2 class="card_title">Kishore Das</h2>
+            <a href="#" class="card_button">1kg = rs 100 => rs 45,000</a>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script>
+      // JavaScript to handle dropdown toggle
+      document.querySelector(".menu-toggle").addEventListener("click", function () {
+          document.querySelector(".navbar ul").classList.toggle("active");
+          this.classList.toggle("active");
+      });
+  </script>
+  </body>
+</html>

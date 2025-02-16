@@ -1,0 +1,323 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+:root{
+    /*====== HSL{Hue,Saturation,Lightness}=======*/
+    --first-color:hsl(82,60%,28%);
+    --title-color: hsl(0, 0%, 15%);
+    --text-color: hsl(0, 0%, 35%);
+    --body-color: hsl(0, 0%, 95%);
+    --container-color: hsl(0, 0%, 100%);
+    --primary-color: #2c3e50;  /* Professional dark blue */
+    --hover-color: #27ae60;  /* Green hover effect */
+    
+    --font-size: 1rem;
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+    --body-font: "Poppins", sans-serif;
+    --h2-font-size: 1.25rem;
+    --small-font-size: .813rem;
+}
+
+@media screen and (min-width:1120px){
+    :root{
+        --h2-font-size:1.5rem;
+        --small-font-size:.875rem;
+    }
+}
+
+/*===== Base =====*/
+*{
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+}
+
+body{
+    font-family: var(--body-font);
+    background-color: var(--body-color);
+    color:var(--text-color);
+}
+
+img{
+    display: block;
+    max-width:100%;
+    height:auto;
+}
+
+
+/* Navbar Container */
+.main {
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--primary-color);
+    z-index: 1000; /* Ensures navbar stays on top */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.menu-toggle{
+    visibility: hidden;
+}
+/* Navbar Flexbox Layout */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 0 5%;
+    font-family: Poppins;
+    font-weight: bold;
+}
+
+/* Logo Styling */
+.navbar .logo {
+    font-size: 1.5rem;
+    
+    color: white;
+    text-decoration: none;
+}
+
+/* Navigation List */
+.navbar ul {
+    display: flex;
+    gap: 2rem; /* Even spacing between items */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+/* Navigation Links */
+.navbar li a {
+    font-size: var(--font-size);
+    color: rgb(26, 199, 230);
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+/* Hover Effect */
+.navbar li a:hover {
+    background-color: rgb(171, 228, 228);
+    color: #070606;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .menu-toggle{
+        visibility: visible;
+    }
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem 0;
+        position: relative;
+    }
+
+    /* Hamburger Menu Button */
+    .menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 10px 15px;
+        cursor: pointer;
+        background-color: var(--primary-color);
+        color: white;
+        font-size: 1.2rem;
+        border: none;
+        outline: none;
+        text-align: left;
+    }
+
+    .menu-toggle span {
+        margin-left: 10px;
+        transition: transform 0.3s ease;
+    }
+
+    /* Rotate arrow when menu is open */
+    .menu-toggle.active span {
+        transform: rotate(180deg);
+    }
+
+    /* Hide menu initially */
+    .navbar ul {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        gap: 1rem;
+        display: none; /* Initially hidden */
+        background-color: white;
+    }
+
+    /* Show menu when active */
+    .navbar ul.active {
+        display: flex;
+    }
+
+    .navbar li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar li a {
+        display: block;
+        width: 100%;
+        padding: 12px 0;
+    }
+}
+
+/*===== card =====*/
+.container{
+    display:grid;
+    place-items:center;
+    margin-inline:1.5rem;
+    padding-block:5rem;
+}
+
+.card_container {
+    display: flex; /* Use flexbox for horizontal layout */
+    flex-wrap: wrap; /* Wrap items on smaller screens */
+    justify-content: center; /* Center align the cards */
+    gap: 3.5rem; /* Maintain spacing between cards */
+}
+
+.card_article {
+    position: relative;
+    overflow: hidden;
+    flex: 1; /* Allow flexibility */
+    max-width: 328px; /* Set max width for consistency */
+}
+
+
+.card_img {
+    width: 328px;  /* Set a fixed width */
+    height: 420px; /* Set a fixed height */
+    object-fit: cover; /* Ensures images fill the space without distortion */
+    border-radius: 1.5rem;
+}
+
+
+.card_data{
+    width:288px;
+    background-color: var(--container-color);
+    padding:1.5rem 2rem;
+    box-shadow: 0 8px 24px hsla(0,0%,0%,.15);
+    border-radius:1rem;
+    position:absolute;
+    bottom: -9rem;
+    left:0;
+    right:0;
+    margin-inline:auto;
+    opacity:0;
+    transition:opacity 1s 1s;
+}
+
+.card_description{
+    display:block;
+    font-size: var(--small-font-size);
+    margin-bottom: .25rem;
+}
+
+.card_title{
+    font-size: var(--h2-font-size);
+    font-weight: 500;
+    color:var(--title-color);
+    margin-bottom:.75rem;
+}
+
+.card_button{
+    text-decoration: none;
+    font-size:var(--small-font-size);
+    font-weight:500;
+    color:var(--first-color);
+}
+
+.card_button:hover{
+    text-decoration: underline;
+}
+
+.card_article:hover .card_data{
+    animation:show-data 1s forwards;
+    opacity:1;
+    transition: opacity .3s;
+}
+
+.card_article:hover{
+    animation:remove-overflow 2s forwards;
+}
+
+.card_article:not(:hover){
+    animation:show-animation 2s forwards;
+}
+
+.card_article:not(:hover) .card_data{
+    animation:remove-data 1s forwards;
+}
+
+@keyframes show-data{
+    50%{
+        transform:translateY(-10rem);
+    }
+    100%{
+        transform:translateY(-8rem);
+    }
+}
+
+@keyframes remove-data{
+    0%{
+        transform: translateY(-7rem);
+    }
+    50%{
+        transform:translateY(-10rem);
+    }
+    100%{
+        transform: translateY(.5rem);
+    }
+}
+
+@keyframes show-overflow{
+    0%{
+        overflow:initial;
+        pointer-events: none;
+    }
+    50%{
+        overflow: hidden;
+    }
+}
+
+/*===== Breakpoints ======*/
+/*for small devices*/
+@media screen and (max-width:340px){
+.container{
+    margin-inline:1rem;
+}
+
+.card_data{
+    width:250px;
+    padding:1rem;
+}
+}
+@media screen and (max-width: 768px) {
+    .card_container {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center; /* Center align when stacked */
+    }
+}
+
+@media screen and (min-width:1120px){
+    .container{
+        height:100vh;
+    }
+    .card__container{
+        grid-template-columns: repeat(3,1fr);
+    }
+    .card_img{
+        width:348px;
+    }
+    .card_data{
+        width:316px;
+        padding-inline:2.5rem;
+    }
+}
